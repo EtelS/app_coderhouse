@@ -9,7 +9,7 @@ const AgregarItem=({handleChangeText, handleAddItem, text})=>{
                     placeholder="Agregar un item"
                     onChangeText={handleChangeText}
                     value={text} />
-        <Button title='Agregame esta'
+        <Button title='Agregame'
                 onPress={handleAddItem}
                 color= 'green'></Button>
       </View>
