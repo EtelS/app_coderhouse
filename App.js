@@ -27,8 +27,9 @@ export default function App() {
 
     setItemList (itemList.filter(({id})=> id!==item.id))
   }
-  const paintedGreenItem=()=>{
+  const paintedGreenItem=(item)=>{
     setColorear(true);
+    console.log(item)
     return
   }
   return (
