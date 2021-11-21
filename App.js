@@ -3,13 +3,14 @@ import React, {useState} from 'react';
 
 import AgregarItem from './components/AgregarItem';
 import FlatList from './components/ListaItem';
+import { ListItem } from 'react-native-elements'
 
 export default function App() {
+
   //use States
   const [text, setText] = useState('')
   const [itemList, setItemList] = useState([]);
-  const [colorear, setColorear] = useState(false);
-
+  
   //funciones
   const handleChangeText=(value) =>{
     setText(value);
@@ -27,11 +28,8 @@ export default function App() {
 
     setItemList (itemList.filter(({id})=> id!==item.id))
   }
-  const paintedGreenItem=(item)=>{
-    setColorear(true);
-    console.log(item)
-    return
-  }
+  
+
   return (
     <View style={styles.container}>
        <AgregarItem
@@ -42,8 +40,6 @@ export default function App() {
         <FlatList
           handleRemoveItem={handleRemoveItem}
           itemList={itemList}
-          paintedGreenItem={paintedGreenItem}
-          colorear={colorear}
         />
      
     </View>

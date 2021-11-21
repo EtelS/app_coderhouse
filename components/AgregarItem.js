@@ -11,7 +11,7 @@ const AgregarItem=({handleChangeText, handleAddItem, text})=>{
                     value={text} />
         <Button title='Agregame'
                 onPress={handleAddItem}
-                color= 'green'></Button>
+                color= 'green' />
       </View>
       
     )
@@ -27,7 +27,7 @@ const AgregarItem=({handleChangeText, handleAddItem, text})=>{
     
       },
       input:{
-        borderBottomColor:'black',
+        borderBottomColor:'#000',
         borderBottomWidth:1,
         flex: 1,
         marginRight: 30
